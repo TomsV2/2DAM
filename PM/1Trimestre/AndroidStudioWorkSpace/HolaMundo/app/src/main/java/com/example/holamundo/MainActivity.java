@@ -4,8 +4,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
+
+    TextView texto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -13,29 +18,21 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 
         Log.i("TAG ciclo vida", "onCreate");
+
+        texto = (TextView)findViewById(R.id.textEvent);
+
+        texto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(MainActivity.this, "He pulsado el texto", Toast.LENGTH_LONG).show();
+            }
+        });
+
     }
 
-    @Override
-    protected void onStart() {
-        super.onStart();
-        Log.i("TAG ciclo vida", "onStart");
-    }
-
-    @Override
-    protected void onResume() {
-        super.onResume();
-        Log.i("TAG ciclo vida", "onResume");
-    }
-
-    @Override
-    protected void onPause() {
-        super.onPause();
-        Log.i("TAG ciclo vida", "onPause");
-    }
-
-    @Override
-    protected void onStop() {
-        super.onStop();
-        Log.i("TAG ciclo vida", "onStop");
-    }
+    /*
+        android:onClick="initSecActivity"
+    public void initSecActivity(View view) {
+        Toast.makeText(this, "Se ha pulsado el texto", Toast.LENGTH_LONG).show();
+    }*/
 }
