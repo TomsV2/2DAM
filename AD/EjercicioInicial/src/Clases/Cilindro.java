@@ -1,39 +1,54 @@
 package Clases;
 
-public class Cilindro {
+public class Cilindro extends Circulo {
 
     //Atributos
-    private double x;
-    private double y;
+    private double altura;
+    private Circulo base;
 
     //Constructor por defecto
-    public Carta(){
-        x = "";
-        y = "";
+    public Cilindro(){
+        altura = 1;
+        base = new Cilindro();
     }
 
     //Constructor con parámetros
-    public Carta(String valor, String palo){
-        this.valor = valor;
-        this.palo = palo;
+    public Cilindro(Circulo b, double a){
+        this.altura = a;
+        this.base = b;
     }
 
     //Gets
-    public String getValor() {
-        return valor;
+    public double altura() {
+        return altura;
     }
 
-    public String getPalo() {
-        return palo;
+    public Circulo base() {
+        return base;
+    }
+
+    //Sets
+    public void altura(double a){
+        this.altura = a;
+    }
+
+    public void base(Circulo b){
+        this.base = b;
     }
 
     //Métodos sobrescritos
     @Override
     public String toString () {
 
-        String s = getValor() +" de " +getPalo();
+        String s = "Altura:  " +altura +
+                   "\nBase:    " +base.toString();
 
         return s;
+    }
+
+    //Métodos añadidos
+    public void trasladar(double a, double b) {
+        base.trasladar(a, b);
     }
 
 }

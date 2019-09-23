@@ -1,5 +1,7 @@
 package Clases;
 
+import java.sql.SQLOutput;
+
 public class Punto {
 
     //Atributos
@@ -27,13 +29,32 @@ public class Punto {
         return y;
     }
 
+    //Sets
+    public void x(double a){
+        this.x = a;
+    }
+
+    public void y(double b){
+        this.y = b;
+    }
+
     //Métodos sobrescritos
     @Override
     public String toString () {
 
-        String s = "(" +x() +"," +y() +")";
+        String s = "(" +x +"," +y +")";
 
         return s;
+    }
+
+    //Métodos añadidos
+    public double distancia(Punto p){
+        return Math.sqrt((Math.abs(x-p.x) * Math.abs(x-p.x)) + (Math.abs(y-p.y) * Math.abs(y-p.y)));
+    }
+
+    public void trasladar(double a, double b){
+        x += a;
+        y += b;
     }
 
 }

@@ -1,39 +1,54 @@
 package Clases;
 
-public class Circulo {
+public class Circulo extends Punto {
 
     //Atributos
-    private double x;
-    private double y;
+    private double radio;
+    private Punto centro;
 
     //Constructor por defecto
-    public Carta(){
-        x = "";
-        y = "";
+    public Circulo(){
+        radio = 1;
+        centro = new Punto();
     }
 
     //Constructor con parámetros
-    public Carta(String valor, String palo){
-        this.valor = valor;
-        this.palo = palo;
+    public Circulo(Punto p, double r){
+        this.radio = r;
+        this.centro = p;
     }
 
     //Gets
-    public String getValor() {
-        return valor;
+    public double radio() {
+        return radio;
     }
 
-    public String getPalo() {
-        return palo;
+    public Punto centro() {
+        return centro;
+    }
+
+    //Sets
+    public void radio(double r){
+        this.radio = r;
+    }
+
+    public void centro(Punto p){
+        this.centro = p;
     }
 
     //Métodos sobrescritos
     @Override
     public String toString () {
 
-        String s = getValor() +" de " +getPalo();
+        String s = "\n\tRadio:  " +radio +
+                   "\n\tCentro: " +centro.toString();
 
         return s;
+    }
+
+    //Métodos añadidos
+    public void trasladar(double a, double b) {
+        centro.trasladar(a, b);
     }
 
 }
