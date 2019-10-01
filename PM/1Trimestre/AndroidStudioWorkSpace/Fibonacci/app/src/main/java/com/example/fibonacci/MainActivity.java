@@ -12,7 +12,10 @@ public class MainActivity extends AppCompatActivity {
 
     Button boton;
     TextView sFibonacci;
-    int i = 1;
+
+    int antFibonacci = 0;
+    int fibonacci = 1;
+    int aux = 0;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +28,12 @@ public class MainActivity extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                sFibonacci.setText(""+(++i));
+
+                aux = antFibonacci + fibonacci;
+                antFibonacci = fibonacci;
+                fibonacci = aux;
+
+                sFibonacci.setText(sFibonacci.getText().toString() + " - " +Integer.toString(fibonacci));
             }
         });
 
