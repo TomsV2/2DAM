@@ -12,8 +12,7 @@ public class MainActivity extends AppCompatActivity {
 
     Button boton;
     TextView sFibonacci;
-    Integer iFibonacci;
-    int antFibonacci = 1;
+    int i = 1;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         boton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Toast.makeText(MainActivity.this, (CharSequence) sFibonacci, Toast.LENGTH_LONG).show();
+                sFibonacci.setText(""+(++i));
             }
         });
 
