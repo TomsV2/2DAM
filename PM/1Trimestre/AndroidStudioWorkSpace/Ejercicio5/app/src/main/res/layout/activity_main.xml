@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="24dp"
+        android:text="Vaya texto más guapo"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/divider"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="24dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Fondo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider">
+
+        <RadioButton
+            android:onClick="colorFondo"
+            android:id="@+id/rb_FondoNegro"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fondo negro" />
+
+        <RadioButton
+            android:onClick="colorFondo"
+            android:id="@+id/rb_FondoVerde"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fondo verde" />
+
+        <RadioButton
+            android:onClick="colorFondo"
+            android:id="@+id/rb_FondoRojo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Fondo rojo" />
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider2"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginTop="24dp"
+        android:background="#000000"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Fondo"
+        tools:layout_editor_absoluteX="-4dp" />
+
+    <RadioGroup
+        android:id="@+id/radioGroup_Texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider2">
+
+        <RadioButton
+            android:id="@+id/rb_TextoBlanco"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="colorTexto"
+            android:text="Texto blanco" />
+
+        <RadioButton
+            android:id="@+id/rb_TextoAmarillo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="colorTexto"
+            android:text="Texto amarillo" />
+
+        <RadioButton
+            android:id="@+id/rb_TextoAzul"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:onClick="colorTexto"
+            android:text="Texto azul" />
+
+    </RadioGroup>
+
+    <View
+        android:id="@+id/divider4"
+        android:layout_width="wrap_content"
+        android:layout_height="2dp"
+        android:layout_marginTop="24dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/radioGroup_Texto" />
+
+    <CheckBox
+        android:onClick="cambiarTexto"
+        android:id="@+id/cb_MostrarTexto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Mostrar texto"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/divider4" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
