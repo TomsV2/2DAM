@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Ejercicio6CalculadoraSencilla</string>
+
+    <string-array name="operadores">
+        <item>+</item>
+        <item>-</item>
+        <item>*</item>
+        <item>/</item>
+    </string-array>
+
+</resources>

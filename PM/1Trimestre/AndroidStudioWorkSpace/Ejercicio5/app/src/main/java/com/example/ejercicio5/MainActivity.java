@@ -40,6 +40,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void colorFondo(View view) {
 
+        switch (radioGroup_Fondo.getCheckedRadioButtonId()){
+            case R.id.rb_FondoNegro:
+                textoCambiante.setBackgroundResource(R.color.fondoNegro);
+                break;
+
+            case R.id.rb_FondoVerde:
+                if(radioGroup_Texto.getCheckedRadioButtonId() == R.id.rb_TextoBlanco){
+                    textoCambiante.setText("¡Viva el Betis!");
+                    textoCambiante.setBackgroundResource(R.color.fondoVerde);
+                }
+                else{
+                    textoCambiante.setBackgroundResource(R.color.fondoVerde);
+                }
+                break;
+
+            case R.id.rb_FondoRojo:
+                textoCambiante.setBackgroundResource(R.color.fondoRojo);
+                break;
+        }
+
         /*switch(view.getId()){
             case R.id.rb_FondoNegro:
                 colorFondo = 1;
@@ -58,6 +78,26 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void colorTexto(View view) {
+
+        switch (radioGroup_Texto.getCheckedRadioButtonId()){
+            case R.id.rb_TextoBlanco:
+                if(radioGroup_Fondo.getCheckedRadioButtonId() == R.id.rb_FondoVerde){
+                    textoCambiante.setText("¡Viva el Betis!");
+                    textoCambiante.setTextColor(getResources().getColor(R.color.textoBlanco));
+                }
+                else{
+                    textoCambiante.setTextColor(getResources().getColor(R.color.textoBlanco));
+                }
+                break;
+
+            case R.id.rb_TextoAmarillo:
+                textoCambiante.setTextColor(getResources().getColor(R.color.textoAmarillo));
+                break;
+
+            case R.id.rb_TextoAzul:
+                textoCambiante.setTextColor(getResources().getColor(R.color.textoAzul));
+                break;
+        }
 
         /*switch(view.getId()){
             case R.id.rb_TextoBlanco:
@@ -79,41 +119,15 @@ public class MainActivity extends AppCompatActivity {
     public void cambiarTexto(View view) {
 
         if (checkBox_MostrarTexto.isChecked()){
-            textoCambiante.setText("Vaya texto más guapo");
-
-            switch (radioGroup_Fondo.getCheckedRadioButtonId()){
-                case R.id.rb_FondoNegro:
-                    textoCambiante.setBackgroundResource(R.color.fondoNegro);
-                    break;
-
-                case R.id.rb_FondoVerde:
-                    textoCambiante.setBackgroundResource(R.color.fondoVerde);
-                    break;
-
-                case R.id.rb_FondoRojo:
-                    textoCambiante.setBackgroundResource(R.color.fondoRojo);
-                    break;
+            if(radioGroup_Fondo.getCheckedRadioButtonId() == R.id.rb_FondoVerde && radioGroup_Texto.getCheckedRadioButtonId() == R.id.rb_TextoBlanco){
+                textoCambiante.setText("¡Viva el Betis!");
             }
-
-            switch (radioGroup_Texto.getCheckedRadioButtonId()){
-                case R.id.rb_TextoBlanco:
-                    if(radioGroup_Fondo.getCheckedRadioButtonId() == R.id.rb_FondoVerde){
-                        textoCambiante.setText("¡Viva el Betis!");
-                        textoCambiante.setTextColor(getResources().getColor(R.color.textoBlanco));
-                    }
-                    else{
-                        textoCambiante.setTextColor(getResources().getColor(R.color.textoBlanco));
-                    }
-                    break;
-
-                case R.id.rb_TextoAmarillo:
-                    textoCambiante.setTextColor(getResources().getColor(R.color.textoAmarillo));
-                    break;
-
-                case R.id.rb_TextoAzul:
-                    textoCambiante.setTextColor(getResources().getColor(R.color.textoAzul));
-                    break;
+            else{
+                textoCambiante.setText("Vaya texto más guapo");
             }
+        }
+        else{
+            textoCambiante.setText("");
         }
     }
 }
