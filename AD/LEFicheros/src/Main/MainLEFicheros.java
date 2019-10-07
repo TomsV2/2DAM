@@ -1,39 +1,32 @@
 package Main;
 
 import java.io.*;
+import java.util.ArrayList;
 
 public class MainLEFicheros {
     public static void main(String[] args){
 
         try{
             //Inicializaciones
+            File fichero = new File("src/Ficheros/ficheroTexto.txt");
+            FileWriter fw = new FileWriter(fichero.getAbsoluteFile(), true);
+
             BufferedReader br = new BufferedReader(new FileReader("src/Ficheros/ficheroTexto.txt"));
-            BufferedWriter bw = new BufferedWriter(new FileWriter("src/Ficheros/ficheroTexto.txt"));
+            BufferedWriter bw = new BufferedWriter(fw);
 
             //Declaraciones de variables
-            String linea = "";
+            String linea = br.readLine();
 
-            //Mientras no sea fin de fichero
             while (linea != null) {
+                System.out.println(linea);
 
-                //Si la linea es un String vacio (Este if es solo para no tener el valor por defecto de String linea)
-                if(!linea.equals("")){
-                    System.out.println(linea);
-                }
-
-                //Leer línea
                 linea = br.readLine();
             }
-            //Fin_Mientras
 
-            if(linea == null){
-
-            }
-
-            br.close();
-
+            bw.newLine();
             bw.write("El archivo ha sido leído.");
 
+            br.close();
             bw.close();
 
         }

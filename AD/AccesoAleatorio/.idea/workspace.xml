@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="d10e00df-60ab-4f82-bda4-3cae8caadcca" name="Default Changelist" comment="" />
+    <list default="true" id="fdfe3fdd-1675-484a-bb6d-3b42c88db7ca" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,10 +18,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1Rjc3vnOAJGk6L2JpVob1Sser4B" />
+  <component name="ProjectId" id="1Rs8FN311abW8qJH6pY7KJZDgQg" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
@@ -36,36 +35,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="MainLEFicheros" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Main.MainLEFicheros" />
-      <module name="LEFicheros" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="Main.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.MainLEFicheros" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="d10e00df-60ab-4f82-bda4-3cae8caadcca" name="Default Changelist" comment="" />
-      <created>1570183749163</created>
+      <changelist id="fdfe3fdd-1675-484a-bb6d-3b42c88db7ca" name="Default Changelist" comment="" />
+      <created>1570444338667</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1570183749163</updated>
+      <updated>1570444338667</updated>
     </task>
     <servers />
   </component>
@@ -74,9 +53,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>

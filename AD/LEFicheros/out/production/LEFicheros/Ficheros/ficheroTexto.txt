@@ -1,1 +1,1 @@
-Un texto bien guapo.
+﻿Hola, esto es un texto bien guapo.
