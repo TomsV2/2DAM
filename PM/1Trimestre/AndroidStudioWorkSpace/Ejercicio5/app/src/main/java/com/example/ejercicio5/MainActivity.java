@@ -3,6 +3,7 @@ package com.example.ejercicio5;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.annotation.SuppressLint;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CheckBox;
@@ -17,10 +18,6 @@ public class MainActivity extends AppCompatActivity {
     RadioGroup radioGroup_Fondo;
     RadioGroup radioGroup_Texto;
 
-    int colorFondo;
-    int colorTexto;
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -33,101 +30,59 @@ public class MainActivity extends AppCompatActivity {
 
         textoCambiante = (TextView) findViewById(R.id.textoCambiante);
 
-        colorFondo = 0;
-        colorTexto = 0;
+        radioGroup_Fondo.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
 
-    }
+                switch (checkedId){
+                    case R.id.rb_FondoNegro:
+                        textoCambiante.setBackgroundColor(Color.BLACK);
+                        break;
 
-    public void colorFondo(View view) {
+                    case R.id.rb_FondoVerde:
+                        textoCambiante.setBackgroundColor(Color.GREEN);
+                        break;
 
-        switch (radioGroup_Fondo.getCheckedRadioButtonId()){
-            case R.id.rb_FondoNegro:
-                textoCambiante.setBackgroundResource(R.color.fondoNegro);
-                break;
+                    case R.id.rb_FondoRojo:
+                        textoCambiante.setBackgroundColor(Color.RED);
+                        break;
+                }
+            }
+        });
 
-            case R.id.rb_FondoVerde:
-                if(radioGroup_Texto.getCheckedRadioButtonId() == R.id.rb_TextoBlanco){
-                    textoCambiante.setText("¡Viva el Betis!");
-                    textoCambiante.setBackgroundResource(R.color.fondoVerde);
+        radioGroup_Texto.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId){
+                    case R.id.rb_TextoBlanco:
+                        textoCambiante.setTextColor(getResources().getColor(R.color.textoBlanco));
+                        break;
+
+                    case R.id.rb_TextoAmarillo:
+                        textoCambiante.setTextColor(getResources().getColor(R.color.textoAmarillo));
+                        break;
+
+                    case R.id.rb_TextoAzul:
+                        textoCambiante.setTextColor(getResources().getColor(R.color.textoAzul));
+                        break;
+                }
+            }
+        });
+
+        checkBox_MostrarTexto.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                if (checkBox_MostrarTexto.isChecked()){
+                    textoCambiante.setText("Vaya texto más guapo");
                 }
                 else{
-                    textoCambiante.setBackgroundResource(R.color.fondoVerde);
+                    textoCambiante.setText("");
                 }
-                break;
 
-            case R.id.rb_FondoRojo:
-                textoCambiante.setBackgroundResource(R.color.fondoRojo);
-                break;
-        }
-
-        /*switch(view.getId()){
-            case R.id.rb_FondoNegro:
-                colorFondo = 1;
-                break;
-
-            case R.id.rb_FondoVerde:
-                colorFondo = 2;
-                break;
-
-            case R.id.rb_FondoRojo:
-                colorFondo = 3;
-                break;
-        }
-
-        Toast.makeText(this, Integer.toString(colorFondo), Toast.LENGTH_SHORT).show();*/
-    }
-
-    public void colorTexto(View view) {
-
-        switch (radioGroup_Texto.getCheckedRadioButtonId()){
-            case R.id.rb_TextoBlanco:
-                if(radioGroup_Fondo.getCheckedRadioButtonId() == R.id.rb_FondoVerde){
-                    textoCambiante.setText("¡Viva el Betis!");
-                    textoCambiante.setTextColor(getResources().getColor(R.color.textoBlanco));
-                }
-                else{
-                    textoCambiante.setTextColor(getResources().getColor(R.color.textoBlanco));
-                }
-                break;
-
-            case R.id.rb_TextoAmarillo:
-                textoCambiante.setTextColor(getResources().getColor(R.color.textoAmarillo));
-                break;
-
-            case R.id.rb_TextoAzul:
-                textoCambiante.setTextColor(getResources().getColor(R.color.textoAzul));
-                break;
-        }
-
-        /*switch(view.getId()){
-            case R.id.rb_TextoBlanco:
-                colorTexto = 1;
-                break;
-
-            case R.id.rb_TextoAmarillo:
-                colorTexto = 2;
-                break;
-
-            case R.id.rb_TextoAzul:
-                colorTexto = 3;
-                break;
-        }
-
-        Toast.makeText(this, Integer.toString(colorTexto), Toast.LENGTH_SHORT).show();*/
-    }
-
-    public void cambiarTexto(View view) {
-
-        if (checkBox_MostrarTexto.isChecked()){
-            if(radioGroup_Fondo.getCheckedRadioButtonId() == R.id.rb_FondoVerde && radioGroup_Texto.getCheckedRadioButtonId() == R.id.rb_TextoBlanco){
-                textoCambiante.setText("¡Viva el Betis!");
             }
-            else{
-                textoCambiante.setText("Vaya texto más guapo");
-            }
-        }
-        else{
-            textoCambiante.setText("");
-        }
+        });
+
     }
 }

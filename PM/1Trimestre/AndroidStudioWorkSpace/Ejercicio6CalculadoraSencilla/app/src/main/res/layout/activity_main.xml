@@ -6,75 +6,70 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
+    <Button
+        android:id="@+id/botonCalcular"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:text="@android:string/ok"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="1.0">
+        app:layout_constraintTop_toTopOf="parent" />
 
-        <Button
-            android:id="@+id/botonCalcular"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@android:string/ok" />
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/operadores"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/numero2"
+        app:layout_constraintEnd_toStartOf="@+id/numero2"
+        app:layout_constraintTop_toTopOf="@+id/numero2"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <EditText
-            android:id="@+id/numero1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="80dp"
-            android:layout_marginTop="51dp"
-            android:layout_toEndOf="@+id/botonCalcular"
-            android:ems="10"
-            android:inputType="number" />
+    <View
+        android:id="@+id/divider"
+        android:layout_width="0dp"
+        android:layout_height="1dp"
+        android:layout_marginTop="8dp"
+        android:background="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/numero2"
+        app:layout_constraintStart_toStartOf="@+id/numero2"
+        app:layout_constraintTop_toBottomOf="@+id/numero2" />
 
-        <EditText
-            android:id="@+id/numero2"
-            android:layout_width="200dp"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/numero1"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="60dp"
-            android:layout_marginEnd="35dp"
-            android:ems="10"
-            android:inputType="number"
-            android:textColor="#000000"
-            android:visibility="visible" />
+    <TextView
+        android:id="@+id/resultado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/divider"
+        app:layout_constraintTop_toBottomOf="@+id/divider" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_marginTop="161dp"
-            android:layout_marginEnd="83dp"
-            android:layout_toStartOf="@+id/numero2"
-            android:entries="@array/operadores"
-            android:spinnerMode="dropdown" />
+    <EditText
+        android:id="@+id/numero1"
+        android:layout_width="150dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="148dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintBottom_toBottomOf="@+id/botonCalcular"
+        app:layout_constraintStart_toEndOf="@+id/botonCalcular"
+        app:layout_constraintTop_toTopOf="@+id/botonCalcular"
+        app:layout_constraintVertical_bias="0.0" />
 
-        <View
-            android:id="@+id/divider"
-            android:layout_width="match_parent"
-            android:layout_height="1dp"
-            android:layout_below="@+id/numero2"
-            android:layout_alignStart="@+id/numero2"
-            android:layout_marginStart="-9dp"
-            android:layout_marginTop="5dp"
-            android:background="#000000" />
+    <EditText
+        android:id="@+id/numero2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:ems="10"
+        android:inputType="number"
+        android:text="0"
+        app:layout_constraintEnd_toEndOf="@+id/numero1"
+        app:layout_constraintStart_toStartOf="@+id/numero1"
+        app:layout_constraintTop_toBottomOf="@+id/numero1" />
 
-        <TextView
-            android:id="@+id/resultado"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/divider"
-            android:layout_alignParentEnd="true"
-            android:layout_marginTop="24dp"
-            android:layout_marginEnd="5dp"
-            android:text="0" />
-    </RelativeLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

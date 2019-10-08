@@ -3,6 +3,8 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/05_RadioButtons.iml" filepath="$PROJECT_DIR$/05_RadioButtons.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/05_RadioButtons-app.iml" filepath="$PROJECT_DIR$/app/05_RadioButtons-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Codigos_Clase_IU-05_RadioButtons.iml" filepath="$PROJECT_DIR$/Codigos_Clase_IU-05_RadioButtons.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

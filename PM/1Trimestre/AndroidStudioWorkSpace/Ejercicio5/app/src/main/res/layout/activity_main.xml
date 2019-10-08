@@ -11,11 +11,10 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:layout_marginBottom="24dp"
+        android:layout_marginBottom="8dp"
         android:fontFamily="serif-monospace"
         android:paddingTop="5dp"
         android:paddingBottom="5dp"
-        android:text="Vaya texto más guapo"
         android:textAlignment="center"
         android:textColor="#000000"
         android:textSize="24sp"
@@ -49,21 +48,18 @@
             android:id="@+id/rb_FondoNegro"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="colorFondo"
             android:text="Fondo negro" />
 
         <RadioButton
             android:id="@+id/rb_FondoVerde"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="colorFondo"
             android:text="Fondo verde" />
 
         <RadioButton
             android:id="@+id/rb_FondoRojo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="colorFondo"
             android:text="Fondo rojo" />
     </RadioGroup>
 
@@ -88,21 +84,18 @@
             android:id="@+id/rb_TextoBlanco"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="colorTexto"
             android:text="Texto blanco" />
 
         <RadioButton
             android:id="@+id/rb_TextoAmarillo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="colorTexto"
             android:text="Texto amarillo" />
 
         <RadioButton
             android:id="@+id/rb_TextoAzul"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:onClick="colorTexto"
             android:text="Texto azul" />
 
     </RadioGroup>
@@ -123,7 +116,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:onClick="cambiarTexto"
         android:text="Mostrar texto"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/divider4" />

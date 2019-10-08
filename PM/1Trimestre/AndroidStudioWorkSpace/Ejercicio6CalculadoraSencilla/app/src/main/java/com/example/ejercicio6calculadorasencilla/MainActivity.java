@@ -21,10 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
     Spinner operadores;
 
-    int n1;
-    int n2;
-    double r;
-    String operador;
+    String r;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,60 +40,46 @@ public class MainActivity extends AppCompatActivity {
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
+                int n1;
+                int n2;
+                String operador;
+
+                n1 = Integer.parseInt(numero1.getText().toString());
+                n2 = Integer.parseInt(numero2.getText().toString());
+                operador = operadores.getSelectedItem().toString();
+
                 switch (operador){
                     case "+":
-                        r = n1 + n2;
+                        r = String.valueOf(n1 + n2);
                         break;
 
                     case "-":
-                        r = n1 - n2;
+                        r = String.valueOf(n1 - n2);
                         break;
 
                     case "*":
-                        r = n1 * n2;
+                        r = String.valueOf(n1 * n2);
                         break;
 
                     case "/":
-                        r = n1 / n2;
+                        if(n1==0 && n2==0){
+                            r = "Indt";
+                        }
+                        else{
+                            if(n1!=0 && n2==0){
+                                r = "±∞";
+                            }
+                            else{
+                                r = String.valueOf(n1 / n2);
+                            }
+                        }
                         break;
                 }
 
-                resultado.setText(String.valueOf(r));
+                resultado.setText(r);
 
             }
         });
-
-        numero1.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-               // Toast.makeText(MainActivity.this, numero1.getText().toString(), Toast.LENGTH_LONG).show();
-
-                n1 = Integer.parseInt(numero1.getText().toString());
-            }
-        });
-
-        numero2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Toast.makeText(MainActivity.this, numero2.getText().toString(), Toast.LENGTH_LONG).show();
-
-                n2 = Integer.parseInt(numero2.getText().toString());
-            }
-        });
-
-        operadores.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
-            @Override
-            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                //Toast.makeText(parent.getContext(), (String) parent.getItemAtPosition(position), Toast.LENGTH_SHORT).show();
-
-                operador = (String) parent.getItemAtPosition(position);
-            }
-
-            @Override
-            public void onNothingSelected(AdapterView<?> parent) {
-
-            }
-        });
-
     }
 }
