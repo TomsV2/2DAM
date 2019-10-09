@@ -1,13 +1,15 @@
-package com.example.ejercicio6calculadorasencilla;
+package com.example.ejercicio7calculadorasencilla;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.RadioGroup;
+import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -17,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView resultado;
 
-    RadioGroup operadores;
+    Spinner operadores;
 
     String r;
 
@@ -33,7 +35,7 @@ public class MainActivity extends AppCompatActivity {
 
         resultado = (TextView) findViewById(R.id.resultado);
 
-        operadores = (RadioGroup) findViewById(R.id.rg_operadores);
+        operadores = (Spinner) findViewById(R.id.spinner);
 
         calcular.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,24 +43,26 @@ public class MainActivity extends AppCompatActivity {
 
                 double n1;
                 double n2;
+                String operador;
 
-                n1 = Double.parseDouble(numero1.getText().toString());
-                n2 = Double.parseDouble(numero2.getText().toString());
+                n1 = Integer.parseInt(numero1.getText().toString());
+                n2 = Integer.parseInt(numero2.getText().toString());
+                operador = operadores.getSelectedItem().toString();
 
-                switch (operadores.getCheckedRadioButtonId()){
-                    case R.id.rb_suma:
+                switch (operador){
+                    case "+":
                         r = String.valueOf(n1 + n2);
                         break;
 
-                    case R.id.rb_resta:
+                    case "-":
                         r = String.valueOf(n1 - n2);
                         break;
 
-                    case R.id.rb_multiplicacion:
+                    case "*":
                         r = String.valueOf(n1 * n2);
                         break;
 
-                    case R.id.rb_divicion:
+                    case "/":
                         if(n1==0 && n2==0){
                             r = "Indt";
                         }

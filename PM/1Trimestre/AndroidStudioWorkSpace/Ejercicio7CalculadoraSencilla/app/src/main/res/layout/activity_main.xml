@@ -16,39 +16,17 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioGroup
-        android:id="@+id/rg_operadores"
+    <Spinner
+        android:id="@+id/spinner"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        app:layout_constraintEnd_toEndOf="@+id/botonCalcular"
-        app:layout_constraintStart_toStartOf="@+id/botonCalcular"
-        app:layout_constraintTop_toBottomOf="@+id/botonCalcular">
-
-        <RadioButton
-            android:id="@+id/rb_suma"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="+" />
-
-        <RadioButton
-            android:id="@+id/rb_resta"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="-" />
-
-        <RadioButton
-            android:id="@+id/rb_multiplicacion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="*" />
-
-        <RadioButton
-            android:id="@+id/rb_divicion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="/" />
-    </RadioGroup>
+        android:layout_height="0dp"
+        android:layout_marginEnd="8dp"
+        android:entries="@array/operadores"
+        android:spinnerMode="dropdown"
+        app:layout_constraintBottom_toBottomOf="@+id/numero2"
+        app:layout_constraintEnd_toStartOf="@+id/numero2"
+        app:layout_constraintTop_toTopOf="@+id/numero2"
+        app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/divider"
