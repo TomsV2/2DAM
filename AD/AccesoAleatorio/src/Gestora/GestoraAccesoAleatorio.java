@@ -18,6 +18,11 @@ public class GestoraAccesoAleatorio {
 
         System.out.print("Introduzca el apellido: ");
         apellido = teclado.next();
+
+        if(apellido.length() > 10){
+            apellido.substring(0,9);
+        }
+
         System.out.println("");
 
         System.out.print("Introduzca el departamento: ");
