@@ -27,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     ArrayList<String> numeros = new ArrayList<String>();
 
+    boolean completado = false;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,7 +64,7 @@ public class MainActivity extends AppCompatActivity {
             b6.getText().toString().equals("6") &&
             b7.getText().toString().equals("7") &&
             b8.getText().toString().equals("8") &&
-            b9.getText().toString().equals(""))
+            b9.getText().toString().equals("") && completado==true)
         {
             Toast.makeText(MainActivity.this, "Has ganao chacho", Toast.LENGTH_LONG).show();
         }
@@ -242,6 +243,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void pulsarBarajar(View view) {
+
+        completado=true;
 
         for(int i=1; i<=50; i++){
             Collections.shuffle(numeros);

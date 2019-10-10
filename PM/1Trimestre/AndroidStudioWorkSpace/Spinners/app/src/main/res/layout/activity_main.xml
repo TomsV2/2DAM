@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+    <TextView
+        android:id="@+id/TextoElige"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/elige"
+        />
+
+    <Spinner
+        android:id="@+id/spin"
+        android:layout_width="match_parent"
+        android:layout_height="82dp"
+        android:layout_below="@+id/TextoElige"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="18dp"
+        android:choiceMode="multipleChoice"></Spinner>
+
+    <TextView
+        android:id="@+id/TextoSelect"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/spin"
+        android:textStyle="italic"
+        android:textSize="35dp"
+        android:text="@string/muestra" />
+
+</RelativeLayout>
