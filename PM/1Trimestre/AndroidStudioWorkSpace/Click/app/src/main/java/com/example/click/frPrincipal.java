@@ -4,22 +4,25 @@ import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
 
+import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.TextView;
 
 
 /**
  * A simple {@link Fragment} subclass.
  * Activities that contain this fragment must implement the
- * {@link frMejoras.OnFragmentInteractionListener} interface
+ * {@link frPrincipal.OnFragmentInteractionListener} interface
  * to handle interaction events.
- * Use the {@link frMejoras#newInstance} factory method to
+ * Use the {@link frPrincipal#newInstance} factory method to
  * create an instance of this fragment.
  */
-public class frMejoras extends Fragment {
+public class frPrincipal extends Fragment {
     // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
@@ -29,7 +32,7 @@ public class frMejoras extends Fragment {
 
     private OnFragmentInteractionListener mListener;
 
-    public frMejoras() {
+    public frPrincipal() {
         // Required empty public constructor
     }
 
@@ -38,16 +41,20 @@ public class frMejoras extends Fragment {
      * this fragment using the provided parameters.
      *
      * @param param1 Parameter 1.
-     * @return A new instance of fragment frMejoras.
+     * @return A new instance of fragment frPrincipal.
      */
     // TODO: Rename and change types and number of parameters
-    public static frMejoras newInstance(String param1) {
-        frMejoras fragment = new frMejoras();
+    public static frPrincipal newInstance(String param1) {
+        frPrincipal fragment = new frPrincipal();
         Bundle args = new Bundle();
         args.putString(ARG_PARAM1, param1);
         fragment.setArguments(args);
         return fragment;
     }
+
+    TextView contador;
+
+    int contadorInt;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -61,7 +68,21 @@ public class frMejoras extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_fr_mejoras, container, false);
+        return inflater.inflate(R.layout.fragment_fr_principal, container, false);
+
+        Button clicker = (Button) getView().findViewById(R.id.clicker);
+        contador = (TextView) getView().findViewById(R.id.contador);
+
+        clicker.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                contadorInt = Integer.parseInt(contador.getText().toString());
+
+                contador.setText(String.valueOf(contadorInt));
+
+            }
+        });
     }
 
     // TODO: Rename method, update argument and hook method into UI event

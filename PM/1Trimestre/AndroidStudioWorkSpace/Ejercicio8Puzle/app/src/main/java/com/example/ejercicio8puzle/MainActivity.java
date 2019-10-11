@@ -22,7 +22,6 @@ public class MainActivity extends AppCompatActivity {
     Button b7;
     Button b8;
     Button b9;
-
     Button barajar;
 
     ArrayList<String> numeros = new ArrayList<String>();
@@ -43,7 +42,6 @@ public class MainActivity extends AppCompatActivity {
         b7 = (Button)findViewById(R.id.boton7);
         b8 = (Button)findViewById(R.id.boton8);
         b9 = (Button)findViewById(R.id.boton9);
-
         barajar = (Button)findViewById(R.id.boton_barajar);
 
         numeros.add(b1.getText().toString());
@@ -246,8 +244,21 @@ public class MainActivity extends AppCompatActivity {
 
         completado=true;
 
+        int posiconBt1 = 0;
+        int posiconBt2 = 0;
+        String aux = "";
+
         for(int i=1; i<=50; i++){
-            Collections.shuffle(numeros);
+            //Collections.shuffle(numeros);
+
+            posiconBt1 = (int)(Math.random()*9);
+            posiconBt2 = (int)(Math.random()*9);
+
+            aux = numeros.get(posiconBt1);
+
+            numeros.set(posiconBt1, numeros.get(posiconBt2));
+            numeros.set(posiconBt2, aux);
+
         }
 
         b1.setText(numeros.get(0));

@@ -16,9 +16,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        fr1 fragmento1 = new fr1();//inflar este fragment dentro del elemento framelayout
+        //fr1 fragmento1 = new fr1();//inflar este fragment dentro del elemento framelayout
+        //getSupportFragmentManager().beginTransaction().add(R.id.contenedor, fragmento1).commit();
 
-        getSupportFragmentManager().beginTransaction().add(R.id.contenedor, fragmento1);
         //por defecto el fragmento que vamos a colocar dentro del contenedor
         btnfr1 = (Button)findViewById(R.id.btnFrag1);
         btnfr2 = (Button)findViewById(R.id.btnFrag2);
