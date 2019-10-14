@@ -69,8 +69,8 @@ public class MainAccesoAleatorio {
                 //Según opcion
                 switch(opcionMenu){
                     case 1:
-                        System.out.println("Consultar WIP");
-                        System.out.println(file.length());
+                        //System.out.println("Consultar WIP");
+                        Gestora.consultarEmpleados(file);
                         break;
 
                     case 2:
