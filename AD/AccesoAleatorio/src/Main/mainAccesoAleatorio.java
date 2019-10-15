@@ -83,7 +83,8 @@ public class MainAccesoAleatorio {
                         break;
 
                     case 4:
-                        System.out.println("Borrar WIP");
+                        //System.out.println("Borrar WIP");
+                        Gestora.borrarEmpleado(file);
                         break;
                 }
                 //Fin_Segun

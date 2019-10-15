@@ -2,6 +2,7 @@ package Gestora;
 
 import java.io.IOException;
 import java.io.RandomAccessFile;
+import java.sql.SQLOutput;
 import java.util.Scanner;
 
 public class GestoraAccesoAleatorio {
@@ -48,7 +49,7 @@ public class GestoraAccesoAleatorio {
             file.writeInt(departamento);
             file.writeDouble(salario);
 
-            file.close();
+
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -84,8 +85,11 @@ public class GestoraAccesoAleatorio {
 
                 salario = file.readDouble();
 
-                if(id > 0){
-                    System.out.println("ID: " +id + "Apellido: " +apellidos.trim());
+                if(id > 0 && departamento!=-1){
+                    System.out.println("\nID: " +id +
+                                       "\nApellido: " +apellidos.trim() +
+                                       "\nDepartamento: " +departamento +
+                                       "\nSalario: " +salario);
                 }
 
                 posicion = posicion + 60;
@@ -95,10 +99,44 @@ public class GestoraAccesoAleatorio {
                 }
 
             }
+
         }
         catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public RandomAccessFile borrarEmpleado(RandomAccessFile file) {
+
+        //Declaración de varaibles
+        int id = 0;
+
+        long posicion;
+
+        //Inicializaciones
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.print("Introduzca el id del empleado a borrar: ");
+        id = teclado.nextInt();
+        System.out.println("");
+
+        try {
+            posicion = (id-1) * 60;
+
+            file.seek(posicion);
+
+            file.writeInt(id);
+            file.writeChars("*                     ");
+            file.writeInt(-1);
+            file.writeDouble(-1);
+
+            System.out.println("Se ha borrado al empleado.");
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        return file;
     }
 
 }

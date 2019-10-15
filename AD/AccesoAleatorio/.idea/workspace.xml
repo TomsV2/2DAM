@@ -88,8 +88,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="java-line">
           <url>file://$PROJECT_DIR$/src/Gestora/GestoraAccesoAleatorio.java</url>
-          <line>75</line>
-          <option name="timeStamp" value="5" />
+          <line>123</line>
+          <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
