@@ -58,9 +58,10 @@ public class MainAccesoAleatorio {
 
             do{
                 //Mostrar menu, leer y validar opción
-                mostrarMenu();
 
                 do{
+                    mostrarMenu();
+                    opcionMenu = teclado.nextInt();
                     System.out.print("Su opcion es: ");
                     opcionMenu = teclado.nextInt();
 

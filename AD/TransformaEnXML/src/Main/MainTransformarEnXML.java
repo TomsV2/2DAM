@@ -1,57 +1,52 @@
 package Main;
 
-import org.w3c.dom.*;
-import javax.xml.parsers.*;
-import javax.xml.transform.*;
-import javax.xml.transform.dom.*;
-import javax.xml.transform.stream.*;
-import java.io.*;
-
 import Gestoras.GestoraTransformarXML;
 
+import java.io.IOException;
+import java.util.Scanner;
+
 public class MainTransformarEnXML {
-    public static void main(String args[]){
 
-        int id;
-        int departamento;
-        int posicion = 0;
-        Double salario = null;
-        char apellido[] = new char[10], aux;
+    public static void mostrarMenu(){
+        System.out.println();
+        System.out.println("[1] ---> Leer fichero empleados");
+        System.out.println("[2] ---> Crear fichero empleados");
+        System.out.println("[0] ---> Salir");
+        System.out.print("Su opcion es: ");
+    }
 
-        File fichero = new File("Empleados.dat");
+    public static void main(String[] args) throws IOException {
 
-        DocumentBuilderFactory factory = DocumentBuilderFactory.newInstance();
+        //Declaraciones de variables
+        int opcionMenu = 0;
+
+        //Inicializaciones
+        Scanner teclado = new Scanner(System.in);
         GestoraTransformarXML gestora = new GestoraTransformarXML();
 
-        try{
-            DocumentBuilder builder = factory.newDocumentBuilder();
+        //Hacer
+        do{
+            //Mostrar menu, leer y validar opcion del menu
+            do{
+                mostrarMenu();
+                opcionMenu = teclado.nextInt();
 
-            DOMImplementation implementation = builder.getDOMImplementation();
-            Document document = implementation.createDocument(null, "Empleados", null);
-            document.setXmlVersion("1.0");
+            }while(opcionMenu<0 || opcionMenu>4);
 
-            //Creamos el nodo empleado
-            Element raiz = document.createElement("empleado");
-            //Lo pegamos a la raiz del documento
-            document.getDocumentElement().appendChild(raiz);
+            switch (opcionMenu){
+                case 1:
+                    gestora.LeerEmpleadoXML();
+                    break;
 
-            //Añadimos el ID
-            gestora.CrearElemento("id", Integer.toString(id), raiz, document);
-
-            //Añadimos el Apellido
-            gestora.CrearElemento("apellido", apellidos.trim(), raiz, document);
-
-            //Añadimos el Departamento
-            gestora.CrearElemento("departamento", Integer.toString(departamento), raiz, document);
-
-            //Añadimos el Salario
-            gestora.CrearElemento("salario", Double.toString(salario), raiz, document);
-
+                case 2:
+                    gestora.CrearEmpleadoXML();
+                    break;
+            }
 
         }
-        catch (ParserConfigurationException e){
-            System.out.println(e.getMessage());
-        }
+        while(opcionMenu != 0); //Mientras opcion del menu no sea 0
+
+        System.out.println("\nAhsta lue!");
 
     }
 }
