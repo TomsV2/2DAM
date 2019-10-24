@@ -1,4 +1,0 @@
-#Wed Oct 09 21:52:11 CEST 2019
-base.0=C\:\\Users\\Familia\\Desktop\\GitHub\\2DAM\\PM\\1Trimestre\\AndroidStudioWorkSpace\\Ejercicio8Puzle\\app\\build\\intermediates\\dex\\debug\\mergeDexDebug\\out\\classes.dex
-path.0=classes.dex
-renamed.0=classes.dex
