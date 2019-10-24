@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">SelecPersonal</string>
-    <string name="elige">Elige: </string>
-    <string name="muestra">Has elegido: </string>
-    <string name="action_settings">Settings</string>
-</resources>
