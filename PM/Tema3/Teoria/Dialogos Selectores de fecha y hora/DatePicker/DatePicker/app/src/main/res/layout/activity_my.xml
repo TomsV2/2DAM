@@ -1,0 +1,89 @@
+<RelativeLayout
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Nombre:"
+        android:id="@+id/txtNombre"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/etNombre"
+        android:layout_toRightOf="@+id/txtNombre"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Fecha de Nacimiento"
+        android:id="@+id/txtFecha"
+        android:layout_alignBottom="@+id/etFechaNacimiento"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="date"
+        android:ems="8"
+        android:enabled="false"
+        android:id="@+id/etFechaNacimiento"
+        android:layout_toEndOf="@+id/txtFecha"
+        android:layout_alignBottom="@+id/button"
+        android:layout_toRightOf="@+id/txtFecha" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:id="@+id/button"
+        android:onClick="onClickFecha"
+        android:layout_toEndOf="@+id/etFechaNacimiento"
+        android:layout_below="@+id/etNombre"
+        android:layout_toRightOf="@+id/etFechaNacimiento" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="Hora:"
+        android:id="@+id/txtHora"
+        android:layout_below="@+id/etFechaNacimiento"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="42dp" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:inputType="time"
+        android:ems="10"
+        android:id="@+id/etHora"
+        android:layout_alignBottom="@+id/txtHora"
+        android:layout_alignLeft="@+id/etNombre"
+        android:layout_alignStart="@+id/etNombre" />
+
+    <Button
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="..."
+        android:id="@+id/btnHora"
+        android:onClick="onClickHora"
+        android:layout_alignBottom="@+id/etHora"
+        android:layout_toRightOf="@+id/etHora"
+        android:layout_toEndOf="@+id/etHora" />
+
+
+</RelativeLayout>
