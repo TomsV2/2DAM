@@ -1,0 +1,9 @@
+create table empleado(
+	id integer primary key,
+	apellido varchar(20),
+	salario float(6,2),
+	departamento tinyint(2)
+);
+
+INSERT INTO empleado (id, apellido, salario, departamento)
+VALUES (1, 'Perez', 1000, 20);
