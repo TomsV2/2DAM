@@ -1,6 +1,6 @@
-package Clases;
+/*package Clases;
 
-public class Empleado {
+public class Empleado {*/
 
     /*//Atributos
     private String codigo = "LIBRE";
@@ -77,4 +77,4 @@ public class Empleado {
         cadena += "\n------------------------------------------";
         return cadena;
     }*/
-}
+//}

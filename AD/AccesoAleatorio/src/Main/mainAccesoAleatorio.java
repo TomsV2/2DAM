@@ -32,7 +32,7 @@ import java.io.IOException;
 import java.io.RandomAccessFile;
 import java.util.Scanner;
 
-public class MainAccesoAleatorio {
+public class mainAccesoAleatorio {
 
     public static void mostrarMenu() {
         System.out.println();
@@ -61,7 +61,6 @@ public class MainAccesoAleatorio {
 
                 do{
                     mostrarMenu();
-                    opcionMenu = teclado.nextInt();
                     System.out.print("Su opcion es: ");
                     opcionMenu = teclado.nextInt();
 
