@@ -1,30 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c1a4f361-d1eb-4907-8d8e-7a30ec41ac22" name="Default Changelist" comment="" />
+    <list default="true" id="1fcef813-5b29-4261-aa2a-b1c77e6c21c9" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
-  <component name="ProjectId" id="1T91UuLqDzznbm9EqLR04OXK55F" />
+  <component name="ProjectId" id="1TKozI71gQYfqdgMUWuIOS2RKlq" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../AD/ConectarConSqlite" />
-    <property name="project.structure.last.edited" value="Project" />
-    <property name="project.structure.proportion" value="0.15" />
-    <property name="project.structure.side.proportion" value="0.2" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
   </component>
   <component name="RunDashboard">
@@ -39,30 +29,16 @@
       </list>
     </option>
   </component>
-  <component name="RunManager">
-    <configuration name="practica1_4" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="practica1_4" />
-      <module name="Practica1.4" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <recent_temporary>
-      <list>
-        <item itemvalue="Application.practica1_4" />
-      </list>
-    </recent_temporary>
-  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="c1a4f361-d1eb-4907-8d8e-7a30ec41ac22" name="Default Changelist" comment="" />
-      <created>1572857515104</created>
+      <changelist id="1fcef813-5b29-4261-aa2a-b1c77e6c21c9" name="Default Changelist" comment="" />
+      <created>1573218408055</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1572857515104</updated>
+      <updated>1573218408055</updated>
     </task>
     <servers />
   </component>
@@ -71,9 +47,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
+            <State />
           </value>
         </entry>
       </map>

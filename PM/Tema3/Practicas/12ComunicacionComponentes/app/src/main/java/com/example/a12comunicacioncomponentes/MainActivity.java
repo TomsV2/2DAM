@@ -56,11 +56,12 @@ public class MainActivity extends AppCompatActivity {
                 i.setAction(Intent.ACTION_SEND);
                 i.setData(Uri.parse("mailto:"));
 
-                String para[] = {edEmail.getText().toString(),"charialcazar@gmail.es","otro@gmail.com"};
+                String para[] = {edEmail.getText().toString(),"otro@gmail.com"};    //Se pueden poner muchos emails aquí separados por coma
+
 
                 i.putExtra(Intent.EXTRA_EMAIL,para);
                 i.putExtra(Intent.EXTRA_SUBJECT,"Saludos desde Android");
-                i.putExtra(Intent.EXTRA_TEXT,"Hola!. Este es nuestro primer email!!");
+                i.putExtra(Intent.EXTRA_TEXT,"Hola! Este es nuestro primer email!!");
                 i.setType("message/rfc822");
 
                 chooser = i.createChooser(i,"Enviar email");
