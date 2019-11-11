@@ -1,16 +1,23 @@
 import java.io.*;
 
-public class practica1_4 {
+public class e {
     public static void main(String[] args) {
         Runtime r = Runtime.getRuntime();
 
-        //String comando = "CMD /C java -jar C:\\Users\\alumno\\Desktop\\Github\\2DAM\\PSP\\Ejemplos.jar";
-        String comando = "CMD /C java -jar C:\\Users\\Familia\\Desktop\\GitHub\\2DAM\\Ejemplo2A\\out\\artifacts\\Ejemplo2A_jar\\Ejemplo2A.jar";
+        String comando = "CMD /C DIR";
 
         Process p = null;
 
         try {
             p = r.exec(comando);
+            InputStream is = p.getInputStream();
+            BufferedReader br = new BufferedReader
+                    (new InputStreamReader(is));
+            String linea;
+            while ((linea = br.readLine()) != null)
+                // lee una línea del fichero
+                System.out.println(linea);
+            br.close();
         }
 
         catch (Exception e) {
