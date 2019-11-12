@@ -47,7 +47,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.bt_ActionWebSearch:
                 intent.setAction(Intent.ACTION_WEB_SEARCH);
 
-                intent.putExtra(SearchManager.QUERY, "https://www.realbetisbalompie.es");
+                intent.putExtra(SearchManager.QUERY, "https://fie.org/");
 
                 startActivity(intent);
             break;
