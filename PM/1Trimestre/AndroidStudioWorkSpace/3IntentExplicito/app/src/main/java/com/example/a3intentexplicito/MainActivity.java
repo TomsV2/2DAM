@@ -2,6 +2,7 @@ package com.example.a3intentexplicito;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -19,6 +20,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     TextView tv_2;
     TextView tv_3;
     TextView tv_4;
+
+    public static final int boton1 = 1;
+    public static final int boton2 = 2;
+    public static final int boton3 = 3;
+    public static final int boton4 = 4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,36 +49,6 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         mostrarContador();
     }
 
-    @Override
-    public void onClick(View v) {
-
-        Intent intent = new Intent(this, Main2Activity.class);
-
-        switch(v.getId()){
-            case R.id.bt_1:
-                intent.putExtra("contador", tv_1.getText().toString());
-                intent.putExtra("boton", 1);
-            break;
-
-            case R.id.bt_2:
-                intent.putExtra("contador", tv_2.getText().toString());
-                intent.putExtra("boton", 2);
-            break;
-
-            case R.id.bt_3:
-                intent.putExtra("contador", tv_3.getText().toString());
-                intent.putExtra("boton", 3);
-            break;
-
-            case R.id.bt_4:
-                intent.putExtra("contador", tv_4.getText().toString());
-                intent.putExtra("boton", 4);
-            break;
-        }
-
-        startActivity(intent);
-    }
-
     public void mostrarContador(){
         Intent intent = getIntent();
 
@@ -82,20 +58,74 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         switch(boton){
             case 1:
                 tv_1.setText(contador);
-            break;
+                break;
 
             case 2:
                 tv_2.setText(contador);
-            break;
+                break;
 
             case 3:
                 tv_3.setText(contador);
-            break;
+                break;
 
             case 4:
                 tv_4.setText(contador);
-            break;
+                break;
         }
     }
 
+    @Override
+    public void onClick(View v) {
+
+        Intent intent = new Intent(this, Main2Activity.class);
+
+        switch(v.getId()){
+            case R.id.bt_1:
+                intent.putExtra("contador", tv_1.getText().toString());
+                startActivityForResult(intent,boton1);
+            break;
+
+            case R.id.bt_2:
+                intent.putExtra("contador", tv_2.getText().toString());
+                startActivityForResult(intent,boton2);
+            break;
+
+            case R.id.bt_3:
+                intent.putExtra("contador", tv_3.getText().toString());
+                startActivityForResult(intent,boton3);
+            break;
+
+            case R.id.bt_4:
+                intent.putExtra("contador", tv_4.getText().toString());
+                startActivityForResult(intent,boton4);
+            break;
+        }
+
+
+    }
+
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (resultCode == Activity.RESULT_OK) {
+            switch(requestCode){
+                case boton1:
+                    tv_1.setText(data.getStringExtra("contador"));
+                    break;
+
+                case boton2:
+                    tv_2.setText(data.getStringExtra("contador"));
+                    break;
+
+                case boton3:
+                    tv_3.setText(data.getStringExtra("contador"));
+                    break;
+
+                case boton4:
+                    tv_4.setText(data.getStringExtra("contador"));
+                    break;
+            }
+        }
+
+    }
 }

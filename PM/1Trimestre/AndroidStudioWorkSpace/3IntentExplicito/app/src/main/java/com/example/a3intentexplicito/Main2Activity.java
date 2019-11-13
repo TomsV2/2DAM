@@ -37,8 +37,8 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
     public void onClick(View v) {
         Intent intent = new Intent(this, MainActivity.class);
         intent.putExtra("contador",tv_contador.getText().toString());
-        intent.putExtra("boton", boton);
-        startActivity(intent);
+        setResult(RESULT_OK, intent);
+        finish();
     }
 
     public void mostrarContador() {
@@ -50,9 +50,4 @@ public class Main2Activity extends AppCompatActivity implements View.OnClickList
         //Establecer el texto y mostrar contador
         tv_contador.setText( String.valueOf(Integer.valueOf(contador)+1) );
     }
-
-    /*@Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
-        super.onActivityResult(requestCode, resultCode, data);
-    }*/
 }
