@@ -5,7 +5,8 @@ public class GestoraConexionJDBC {
 		
 	//Conexiones
 	public Connection conectarSQLite() throws SQLException {
-		return DriverManager.getConnection("jdbc:sqlite:C:\\sqlite\\EmpleadosCHECK.db");
+		Connection conexion = DriverManager.getConnection("jdbc:sqlite:C:\\sqlite\\EmpleadosCHECK.db");
+		return conexion;
 	}
 	
 	//Consulta

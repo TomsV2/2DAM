@@ -1,0 +1,83 @@
+
+Nombre de imagen               PID Servicios                                    
+========================= ======== =============================================
+svchost.exe                   1020 PlugPlay                                     
+svchost.exe                    404 BrokerInfrastructure, DcomLaunch, Power,     
+                                   SystemEventsBroker                           
+svchost.exe                    916 RpcEptMapper, RpcSs                          
+svchost.exe                   1052 LSM                                          
+svchost.exe                   1232 NcbService                                   
+svchost.exe                   1300 hidserv                                      
+svchost.exe                   1452 Schedule                                     
+svchost.exe                   1476 ProfSvc                                      
+svchost.exe                   1532 EventLog                                     
+svchost.exe                   1536 CoreMessagingRegistrar                       
+svchost.exe                   1528 TimeBrokerSvc                                
+svchost.exe                   1708 Themes                                       
+svchost.exe                   1716 SysMain                                      
+svchost.exe                   1724 EventSystem                                  
+svchost.exe                   1856 SENS                                         
+svchost.exe                   1880 AudioEndpointBuilder                         
+svchost.exe                   1888 FontCache                                    
+svchost.exe                   2012 nsi                                          
+svchost.exe                    944 Dhcp                                         
+svchost.exe                   2068 NlaSvc                                       
+svchost.exe                   2100 Dnscache                                     
+svchost.exe                   2224 netprofm                                     
+svchost.exe                   2320 Audiosrv                                     
+svchost.exe                   2340 lfsvc                                        
+svchost.exe                   2440 UserManager                                  
+svchost.exe                   2488 Wcmsvc                                       
+svchost.exe                   2492 DusmSvc                                      
+svchost.exe                   2548 ShellHWDetection                             
+svchost.exe                   2872 DispBrokerDesktopSvc                         
+svchost.exe                   2920 WinHttpAutoProxySvc                          
+svchost.exe                   2972 BFE, mpssvc                                  
+svchost.exe                   3016 LanmanWorkstation                            
+svchost.exe                   3036 StateRepository                              
+svchost.exe                   3252 DeviceAssociationService                     
+svchost.exe                   3260 DPS                                          
+svchost.exe                   3268 Winmgmt                                      
+svchost.exe                   3332 CryptSvc                                     
+svchost.exe                   3340 ftpsvc                                       
+svchost.exe                   3348 IKEEXT                                       
+svchost.exe                   3364 SstpSvc                                      
+svchost.exe                   3392 W3SVC, WAS                                   
+svchost.exe                   3400 stisvc                                       
+svchost.exe                   3416 AppHostSvc                                   
+svchost.exe                   3424 TrkWks                                       
+svchost.exe                   3432 WpnService                                   
+svchost.exe                   3440 DiagTrack                                    
+svchost.exe                   3524 WdiServiceHost                               
+svchost.exe                   2404 iphlpsvc                                     
+svchost.exe                   4660 SSDPSRV                                      
+svchost.exe                   4812 LanmanServer                                 
+svchost.exe                   5116 RasMan                                       
+svchost.exe                   6508 BITS                                         
+svchost.exe                   5868 CDPSvc                                       
+svchost.exe                   3700 CDPUserSvc_8b085                             
+svchost.exe                   2024 WpnUserService_8b085                         
+svchost.exe                   6392 TokenBroker                                  
+svchost.exe                   7312 TabletInputService                           
+svchost.exe                   8172 cbdhsvc_8b085                                
+svchost.exe                   7496 OneSyncSvc_8b085,                            
+                                   PimIndexMaintenanceSvc_8b085,                
+                                   UnistoreSvc_8b085, UserDataSvc_8b085         
+svchost.exe                   1248 LicenseManager                               
+svchost.exe                   7632 WbioSrvc                                     
+svchost.exe                   9608 InstallService                               
+svchost.exe                   9848 wscsvc                                       
+svchost.exe                  11048 UsoSvc                                       
+svchost.exe                  11652 Appinfo                                      
+svchost.exe                  11560 PcaSvc                                       
+svchost.exe                  13952 BthAvctpSvc                                  
+svchost.exe                  15644 StorSvc                                      
+svchost.exe                   7800 PhoneSvc                                     
+svchost.exe                  16220 wuauserv                                     
+svchost.exe                  20040 DoSvc                                        
+svchost.exe                   8532 WlanSvc                                      
+svchost.exe                  16896 RmSvc                                        
+svchost.exe                   7792 DsSvc                                        
+svchost.exe                  19368 lmhosts                                      
+svchost.exe                  11892 WdiSystemHost                                
+svchost.exe                  12856 AppXSvc                                      

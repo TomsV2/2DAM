@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="Ejemplo2A/src"/>
+	<classpathentry kind="src" path="Ejemplos/src"/>
+	<classpathentry kind="src" path="PerdirMostrarNombre/src"/>
+	<classpathentry kind="src" path="Practica/Practica1.4/src"/>
+	<classpathentry kind="src" path="Practica/Practica1.5/src"/>
+	<classpathentry kind="src" path="Practica1.4/src"/>
+	<classpathentry kind="src" path="Practica1.6/src"/>
+	<classpathentry kind="src" path="Sumar/src"/>
+	<classpathentry kind="lib" path="Ejemplos/out/production/Ejemplos/ArchivosJar/Ejemplo2.jar"/>
+	<classpathentry kind="lib" path="Practica/Practica1.4/out/production/Practica1.4/ArchivosJar/Ejemplos.jar"/>
+	<classpathentry kind="lib" path="Practica1.4/bin/ArchivosJar/Ejemplo2.jar"/>
+	<classpathentry kind="lib" path="Practica1.4/bin/ArchivosJar/PedirMostrarNombre.jar"/>
+	<classpathentry kind="lib" path="Practica1.6/bin/EjecutarSumaCifras.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path="Ejemplo2A/bin"/>
+</classpath>

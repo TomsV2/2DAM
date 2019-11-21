@@ -7,7 +7,7 @@ public class Practica1_4A {
 	public static void main(String[] args) {
         Runtime r = Runtime.getRuntime();
 
-        String comando = "CMD /C java -jar C:\\Users\\alumno\\Desktop\\Github\\2DAM\\PSP\\Practica1.4\\src\\ArchivosJar\\Ejemplo2.jar";
+        String comando = "CMD /C java -jar .\\src\\ArchivosJar\\Ejemplo2.jar";
 
         Process p = null;
 

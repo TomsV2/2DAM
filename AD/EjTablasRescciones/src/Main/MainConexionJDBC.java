@@ -1,17 +1,16 @@
 package Main;
+
+import Gestora.GestoraConexionJDBC;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-import Gestora.GestoraConexionJDBC;
-
 public class MainConexionJDBC {
 	public static void main(String[] args) {
 		
 		try {
-			GestoraConexionJDBC gestora = null;
-			
+			GestoraConexionJDBC gestora = new GestoraConexionJDBC();
 			Connection conexion = null;
 			ResultSet resul = null;
 			
@@ -19,7 +18,7 @@ public class MainConexionJDBC {
 			conexion = gestora.conectarSQLite();
 			
 			if(conexion != null){
-				System.out.println("Conectado.");
+				System.out.println("Conectado.\n");
 			}
 			
 			//Llamada a la consulta y mostrar resultado por pantalla.
@@ -30,6 +29,8 @@ public class MainConexionJDBC {
 			//Cerramos las conexiones
 			gestora.cerrarConexion(conexion, resul);
 			
+			resul.close();
+			conexion.close();
 		}
 		catch(Exception ex) {
 			System.out.println("Error " +ex.getMessage());
