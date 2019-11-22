@@ -9,10 +9,9 @@ public class MainPedirMostrarNombre {
 		//Inicializaciones
 		Scanner teclado = new Scanner(System.in);
 		
-		System.out.print("Introduzca su nombre por favor: ");
+		System.out.println("Introduzca su nombre por favor: ");
 		nombre = teclado.nextLine();
 		
-		System.out.println("\nSu nombre es: " + nombre);
-		
+		System.out.println("Su nombre es: " + nombre);
 	}
 }
