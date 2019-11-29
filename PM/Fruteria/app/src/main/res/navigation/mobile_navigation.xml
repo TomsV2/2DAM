@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/blankFragment">
+    app:startDestination="@+id/nav_home">
 
     <fragment
         android:id="@+id/nav_home"
@@ -12,22 +12,16 @@
         tools:layout="@layout/fragment_home" />
 
     <fragment
-        android:id="@+id/nav_gallery"
-        android:name="com.example.fruteria.ui.gallery.GalleryFragment"
-        android:label="@string/menu_gallery"
-        tools:layout="@layout/fragment_gallery" />
+        android:id="@+id/nav_frutas"
+        android:name="com.example.fruteria.ui.frutas.FrutasFragment"
+        android:label="@string/menu_frutas"
+        tools:layout="@layout/fragment_frutas" />
 
     <fragment
-        android:id="@+id/nav_slideshow"
-        android:name="com.example.fruteria.ui.slideshow.SlideshowFragment"
+        android:id="@+id/nav_nuevasfrutas"
+        android:name="com.example.fruteria.ui.nuevasFrutas.NuevasFrutasFragment"
         android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_slideshow" />
-
-    <fragment
-        android:id="@+id/nav_tools"
-        android:name="com.example.fruteria.ui.tools.ToolsFragment"
-        android:label="@string/menu_tools"
-        tools:layout="@layout/fragment_tools" />
+        tools:layout="@layout/fragment_nuevasFrutas" />
 
     <fragment
         android:id="@+id/nav_share"
@@ -40,10 +34,4 @@
         android:name="com.example.fruteria.ui.send.SendFragment"
         android:label="@string/menu_send"
         tools:layout="@layout/fragment_send" />
-
-    <fragment
-        android:id="@+id/blankFragment"
-        android:name="com.example.fruteria.BlankFragment"
-        android:label="fragment_blank"
-        tools:layout="@layout/fragment_blank" />
 </navigation>
