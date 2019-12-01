@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<config date="1574754983373" transient="false">
+	<site updateable="true" url="platform:/base/" enabled="true" policy="USER-EXCLUDE">
+		<feature id="com.jaspersoft.studio.supplemental.bundles" version="6.10.0.final" url="features/com.jaspersoft.studio.supplemental.bundles_6.10.0.final/">
+		</feature>
+		<feature id="com.jaspersoft.studio.i18n.feature" version="1.0.0.nl" url="features/com.jaspersoft.studio.i18n.feature_1.0.0.nl/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.ssl.feature" version="1.1.200.v20190502-0212" url="features/org.eclipse.ecf.core.ssl.feature_1.1.200.v20190502-0212/">
+		</feature>
+		<feature id="com.jaspersoft.studio.feature" version="6.10.0.final" url="features/com.jaspersoft.studio.feature_6.10.0.final/" plugin-identifier="com.jaspersoft.studio">
+		</feature>
+		<feature id="net.sf.jasperreports.feature" version="6.10.0.final" url="features/net.sf.jasperreports.feature_6.10.0.final/">
+		</feature>
+		<feature id="org.eclipse.ecf.core.feature" version="1.5.3.v20190423-0625" url="features/org.eclipse.ecf.core.feature_1.5.3.v20190423-0625/">
+		</feature>
+		<feature id="com.jaspersoft.studio.rcp.feature" version="6.10.0.final" url="features/com.jaspersoft.studio.rcp.feature_6.10.0.final/">
+		</feature>
+		<feature id="com.jaspersoft.studio.foundation.bundles" version="1.0.13" url="features/com.jaspersoft.studio.foundation.bundles_1.0.13/">
+		</feature>
+		<feature id="org.eclipse.egit" version="5.4.0.201906121030-r" url="features/org.eclipse.egit_5.4.0.201906121030-r/">
+		</feature>
+		<feature id="org.eclipse.e4.rcp" version="1.6.500.v20190605-1801" url="features/org.eclipse.e4.rcp_1.6.500.v20190605-1801/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.core.feature" version="1.6.200.v20190516-1504" url="features/org.eclipse.equinox.p2.core.feature_1.6.200.v20190516-1504/">
+		</feature>
+		<feature id="org.eclipse.jgit.pgm" version="5.4.0.201906121030-r" url="features/org.eclipse.jgit.pgm_5.4.0.201906121030-r/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.httpclient45.feature" version="1.0.0.v20190530-1947" url="features/org.eclipse.ecf.filetransfer.httpclient45.feature_1.0.0.v20190530-1947/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.extras.feature" version="1.4.400.v20190516-1504" url="features/org.eclipse.equinox.p2.extras.feature_1.4.400.v20190516-1504/">
+		</feature>
+		<feature id="org.tigris.subversion.subclipse" version="4.3.0.201901172050" url="features/org.tigris.subversion.subclipse_4.3.0.201901172050/" plugin-identifier="org.tigris.subversion.subclipse.core">
+		</feature>
+		<feature id="org.eclipse.emf.common" version="2.16.0.v20190528-0845" url="features/org.eclipse.emf.common_2.16.0.v20190528-0845/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.user.ui" version="2.4.400.v20190516-1504" url="features/org.eclipse.equinox.p2.user.ui_2.4.400.v20190516-1504/">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.feature" version="3.14.5.v20190423-0614" url="features/org.eclipse.ecf.filetransfer.feature_3.14.5.v20190423-0614/">
+		</feature>
+		<feature id="org.eclipse.cvs" version="1.4.900.v20190605-1800" url="features/org.eclipse.cvs_1.4.900.v20190605-1800/">
+		</feature>
+		<feature id="org.eclipse.equinox.p2.rcp.feature" version="1.4.400.v20190516-1504" url="features/org.eclipse.equinox.p2.rcp.feature_1.4.400.v20190516-1504/">
+		</feature>
+		<feature id="org.eclipse.help" version="2.2.600.v20190605-1800" url="features/org.eclipse.help_2.2.600.v20190605-1800/" plugin-identifier="org.eclipse.help.base">
+		</feature>
+		<feature id="org.eclipse.ecf.filetransfer.ssl.feature" version="1.1.100.v20180301-0132" url="features/org.eclipse.ecf.filetransfer.ssl.feature_1.1.100.v20180301-0132/">
+		</feature>
+		<feature id="org.eclipse.jgit" version="5.4.0.201906121030-r" url="features/org.eclipse.jgit_5.4.0.201906121030-r/">
+		</feature>
+		<feature id="org.eclipse.jgit.http.apache" version="5.4.0.201906121030-r" url="features/org.eclipse.jgit.http.apache_5.4.0.201906121030-r/">
+		</feature>
+		<feature id="com.jaspersoft.studio.jre.feature" version="1.8.0.u151" url="features/com.jaspersoft.studio.jre.feature_1.8.0.u151/">
+		</feature>
+		<feature id="org.eclipse.emf.ecore" version="2.18.0.v20190528-0845" url="features/org.eclipse.emf.ecore_2.18.0.v20190528-0845/">
+		</feature>
+		<feature id="org.eclipse.jgit.lfs" version="5.4.0.201906121030-r" url="features/org.eclipse.jgit.lfs_5.4.0.201906121030-r/">
+		</feature>
+		<feature id="net.sf.jasperreports.samples.feature" version="6.10.0.final" url="features/net.sf.jasperreports.samples.feature_6.10.0.final/">
+		</feature>
+		<feature id="org.eclipse.nebula.widgets.cdatetime.feature" version="1.3.0.201812241324" url="features/org.eclipse.nebula.widgets.cdatetime.feature_1.3.0.201812241324/">
+		</feature>
+		<feature id="jre.win32.win32.x86_64.feature" version="1.8.0.u151" url="features/jre.win32.win32.x86_64.feature_1.8.0.u151/">
+		</feature>
+		<feature id="org.eclipse.jgit.ssh.apache" version="5.4.0.201906121030-r" url="features/org.eclipse.jgit.ssh.apache_5.4.0.201906121030-r/">
+		</feature>
+		<feature id="org.tmatesoft.svnkit" version="1.8.12.r10533_v20160129_0158" url="features/org.tmatesoft.svnkit_1.8.12.r10533_v20160129_0158/">
+		</feature>
+		<feature id="org.eclipse.nebula.cwt.feature" version="1.1.0.201812241324" url="features/org.eclipse.nebula.cwt.feature_1.1.0.201812241324/">
+		</feature>
+		<feature id="org.eclipse.rcp" version="4.12.0.v20190605-1801" url="features/org.eclipse.rcp_4.12.0.v20190605-1801/">
+		</feature>
+		<feature id="org.tigris.subversion.clientadapter.svnkit.feature" version="1.8.12.3" url="features/org.tigris.subversion.clientadapter.svnkit.feature_1.8.12.3/" plugin-identifier="org.tigris.subversion.clientadapter.svnkit">
+		</feature>
+	</site>
+	<site updateable="true" url="file:dropins\eclipse\" enabled="true" policy="USER-EXCLUDE">
+		<feature id="org.eclipse.babel.nls_eclipse_it" version="4.2.0.v20130724060447" url="features/org.eclipse.babel.nls_eclipse_it_4.2.0.v20130724060447/">
+		</feature>
+	</site>
+</config>
