@@ -1,23 +1,71 @@
 package Main;
 
-import java.io.File;
+import java.io.*;
 import java.util.ArrayList;
 import java.util.HashMap;
 
 public class MainProyectoAD {
+
+    public static byte[] getBytesFromFile(String texto) throws IOException {
+        long length = texto.length();
+
+        if (length > Integer.MAX_VALUE) {
+            throw new IOException("El archivo es kilometrico!!! Intente uno mas chico.");
+        }
+
+        byte[] bytes = new byte[(int)length];
+        int offset = 0;
+        int numRead = 0;
+
+        texto.getBytes();
+
+        InputStream is = new FileInputStream(texto);
+        try {
+            while (offset < bytes.length
+                    && (numRead=is.read(bytes, offset, bytes.length-offset)) >= 0) {
+                offset += numRead;
+            }
+        } finally {
+            is.close();
+        }
+
+        return bytes;
+    }
+
     public static void main(String [] args){
 
-        String palabra = "Palabra";
         int posicionLetra = 0;
+        String texto = "";
 
-        HashMap<String, Integer> diccionario = new HashMap<>();
+        File ficheroBin = new File("src/Ficheros/binario.bin");
+        File txt = new File("src/Ficheros/Texto.txt");
 
         ArrayList<String> letras = new ArrayList<String>();
         ArrayList<Integer> cantidades = new ArrayList<Integer>();
 
-        for(int i=0; i<palabra.length(); i++){
+        //Leer texto del fichero .txt
+        try {
+            BufferedReader br = new BufferedReader(new FileReader("src/Ficheros/Texto.txt"));
 
-            String letra = String.valueOf(palabra.charAt(i));
+            String linea = br.readLine();
+
+            while (linea != null) {
+                texto = texto+linea;
+
+                linea = br.readLine();
+            }
+
+            br.close();
+
+            System.out.println(texto);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+
+        for(int i=0; i<texto.length(); i++){
+
+            String letra = String.valueOf(texto.charAt(i));
 
             System.out.println(letra);
 
@@ -73,7 +121,7 @@ public class MainProyectoAD {
             System.out.println(cantidad);
         }
 
-        File fichero = new File("src/Ficheros/binario.txt");
+
 
     }
 }
