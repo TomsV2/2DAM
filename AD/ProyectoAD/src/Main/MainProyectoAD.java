@@ -13,15 +13,12 @@ public class MainProyectoAD {
     public static void main(String [] args){
 
         //Declaraciones de variables
-        int posicionLetra;
         String texto = "";
-        int paresBinarios;
-        String traductor = "";
 
         //Inicializaciones
         GestoraProyectoAD gestora = new GestoraProyectoAD();
 
-        File ficheroEncriptado = new File("src/Ficheros/x.txt");
+        File ficheroEncriptado = new File("src/Ficheros/x.bin");
         File ficheroTraductor = new File("src/Ficheros/traductor.txt");
 
         ArrayList<String> letras = new ArrayList<String>();
@@ -41,10 +38,7 @@ public class MainProyectoAD {
         //Crear codificación de las letras del texto
         tablaNunez = gestora.crearTabla(letras);
 
-        System.out.println();
-
-        System.out.println(gestora.encriptar(texto, tablaNunez, letras));
-
+        //Crear y escribir fichero encriptado
         try {
             ficheroEncriptado.createNewFile();
 
@@ -58,20 +52,23 @@ public class MainProyectoAD {
             e.printStackTrace();
         }
 
+        //Crear y escribir fichero con la traducción
         try {
             ficheroTraductor.createNewFile();
 
             FileWriter fw = new FileWriter(ficheroTraductor.getAbsoluteFile(), true);
             BufferedWriter bw = new BufferedWriter(fw);
 
-            bw.write(gestora.crearTraductor(letras));
+
+
+            bw.write(gestora.crearTraductor(letras).toCharArray());
 
             bw.close();
         } catch (IOException e) {
             e.printStackTrace();
         }
 
-        System.out.println(traductor);
+        //System.out.println(traductor);
 
     }
 }

@@ -150,9 +150,9 @@ public class GestoraProyectoAD {
 
         for(int i=0; i<=arrayLetras.size()-1; i++){
 
-            cifradoBinario = "";
+            cifradoBinario = cifradoBinario + arrayLetras.get(i);
 
-            System.out.print(arrayLetras.get(i) +":");
+            //System.out.print(arrayLetras.get(i));
 
             for(int j=0; j<=paresBinarios-1; j++){
                 if(!tablaNunez[i][j].equals(" ")){
@@ -160,8 +160,7 @@ public class GestoraProyectoAD {
                 }
             }
 
-            System.out.print(cifradoBinario);
-            System.out.print(".");
+            //System.out.print(cifradoBinario);
         }
         return cifradoBinario;
     }
