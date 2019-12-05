@@ -6,6 +6,7 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 import com.google.android.material.snackbar.Snackbar;
 
 import android.view.View;
+import android.widget.ListView;
 
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
@@ -19,14 +20,34 @@ import androidx.drawerlayout.widget.DrawerLayout;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
+
+    ListView listView;
+    List<Fruta> listFruta;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        listView = findViewById(R.id.listview_frutas);
+
+        listFruta = new ArrayList<>();
+        listFruta.add(new Fruta("Pato", "PatoLandia", R.drawable.pato));
+
+        AdaptadorListaFrutas adaptadorListaFrutas = new AdaptadorListaFrutas(
+                this,
+                R.layout.averia_item,       //CREAR UN XML CON LA PLANTILLA QUE TENDRÁN LOS ELEMENTOS DEL LISTVIEW
+                listFruta
+        );
+
+        listView.setAdapter(adaptadorListaFrutas);
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         FloatingActionButton fab = findViewById(R.id.fab);

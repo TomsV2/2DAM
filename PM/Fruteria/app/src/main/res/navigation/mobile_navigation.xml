@@ -14,14 +14,12 @@
     <fragment
         android:id="@+id/nav_frutas"
         android:name="com.example.fruteria.ui.frutas.FrutasFragment"
-        android:label="@string/menu_frutas"
-        tools:layout="@layout/fragment_frutas" />
+        android:label="@string/menu_frutas" />
 
     <fragment
         android:id="@+id/nav_nuevasfrutas"
         android:name="com.example.fruteria.ui.nuevasFrutas.NuevasFrutasFragment"
-        android:label="@string/menu_slideshow"
-        tools:layout="@layout/fragment_nuevasFrutas" />
+        android:label="@string/menu_nuevasFrutas" />
 
     <fragment
         android:id="@+id/nav_share"
