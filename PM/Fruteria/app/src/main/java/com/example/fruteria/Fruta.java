@@ -11,7 +11,7 @@ public class Fruta {
     public Fruta() {
     }
 
-    //Constructor por parámetros
+    //Constructor con parámetros
     public Fruta(String nombre, String origen, int urlFoto) {
         this.nombre = nombre;
         this.origen = origen;

@@ -42,7 +42,7 @@ public class MainActivity extends AppCompatActivity {
 
         AdaptadorListaFrutas adaptadorListaFrutas = new AdaptadorListaFrutas(
                 this,
-                R.layout.averia_item,       //CREAR UN XML CON LA PLANTILLA QUE TENDRÁN LOS ELEMENTOS DEL LISTVIEW
+                R.layout.fruta_item,
                 listFruta
         );
 
