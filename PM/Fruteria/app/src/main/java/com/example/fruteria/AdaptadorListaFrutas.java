@@ -40,10 +40,7 @@ public class AdaptadorListaFrutas extends ArrayAdapter<Fruta> {
 
         tv_NombreFruta.setText(elementoActual.getNombre());
         tv_OrigenFruta.setText(elementoActual.getOrigen());
-
-            Glide.with(ctx)
-                    .load(elementoActual.getUrlFoto())
-                    .into(imagenFruta);
+        imagenFruta.setImageResource(elementoActual.getUrlFoto());
 
         return v;
     }

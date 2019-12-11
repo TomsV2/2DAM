@@ -27,26 +27,12 @@ public class MainActivity extends AppCompatActivity {
 
     private AppBarConfiguration mAppBarConfiguration;
 
-    ListView listView;
-    List<Fruta> listFruta;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-
-        listView = findViewById(R.id.listview_frutas);
-
-        listFruta = new ArrayList<>();
-        listFruta.add(new Fruta("Pato", "PatoLandia", R.drawable.pato));
-
-        AdaptadorListaFrutas adaptadorListaFrutas = new AdaptadorListaFrutas(
-                this,
-                R.layout.fruta_item,
-                listFruta
-        );
-
-        listView.setAdapter(adaptadorListaFrutas);
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);

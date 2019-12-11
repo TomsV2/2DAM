@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ListView;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -12,7 +13,12 @@ import androidx.fragment.app.Fragment;
 import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
+import com.example.fruteria.AdaptadorListaFrutas;
+import com.example.fruteria.Fruta;
 import com.example.fruteria.R;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class HomeFragment extends Fragment {
 
