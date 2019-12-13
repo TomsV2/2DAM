@@ -22,27 +22,21 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginEnd="114dp"
         android:text="Nombre Fruta"
         android:textColor="#000000"
         android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@+id/imagenFruta"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/tv_OrigenFruta"
         app:layout_constraintStart_toEndOf="@+id/imagenFruta"
-        app:layout_constraintTop_toTopOf="@+id/imagenFruta"
-        app:layout_constraintVertical_bias="0.315" />
+        app:layout_constraintTop_toTopOf="@+id/imagenFruta" />
 
     <TextView
         android:id="@+id/tv_OrigenFruta"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="33dp"
-        android:layout_marginEnd="170dp"
         android:text="Denominacion"
         app:layout_constraintBottom_toBottomOf="@+id/imagenFruta"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/imagenFruta"
-        app:layout_constraintTop_toTopOf="@+id/imagenFruta"
-        app:layout_constraintVertical_bias="0.79" />
+        app:layout_constraintTop_toTopOf="@+id/imagenFruta" />
 </androidx.constraintlayout.widget.ConstraintLayout>
