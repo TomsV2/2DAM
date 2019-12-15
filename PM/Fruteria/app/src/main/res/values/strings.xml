@@ -107,4 +107,10 @@
         "when a user tries to pick up one of cards.\n\n"
     </string>
     <string name="title_activity_scrolling__banana">ScrollingActivity_Banana</string>
+    <string name="title_activity_scrolling__fresa">ScrollingActivity_Fresa</string>
+    <string name="title_activity_scrolling__naranja">ScrollingActivity_Naranja</string>
+    <string name="title_activity_scrolling__pera">ScrollingActivity_Pera</string>
+    <string name="title_activity_scrolling__manzana">ScrollingActivity_Manzana</string>
+    <string name="title_activity_scrolling__cereza">ScrollingActivity_Cereza</string>
+    <string name="title_activity_scrolling__mora">ScrollingActivity_Mora</string>
 </resources>

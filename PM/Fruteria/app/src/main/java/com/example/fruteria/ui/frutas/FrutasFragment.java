@@ -16,6 +16,12 @@ import com.example.fruteria.Fruta;
 import com.example.fruteria.MainActivity;
 import com.example.fruteria.R;
 import com.example.fruteria.ScrollingActivity_Banana;
+import com.example.fruteria.ScrollingActivity_Cereza;
+import com.example.fruteria.ScrollingActivity_Fresa;
+import com.example.fruteria.ScrollingActivity_Manzana;
+import com.example.fruteria.ScrollingActivity_Mora;
+import com.example.fruteria.ScrollingActivity_Naranja;
+import com.example.fruteria.ScrollingActivity_Pera;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -64,27 +70,33 @@ public class FrutasFragment extends Fragment {
                         break;
 
                     case 1:
-                        Toast.makeText(getContext(), "Fruta 2", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(view.getContext(), ScrollingActivity_Fresa.class);
+                        //Toast.makeText(getContext(), "Fruta 2", Toast.LENGTH_SHORT).show();
                         break;
 
                     case 2:
-                        Toast.makeText(getContext(), "Fruta 3", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(view.getContext(), ScrollingActivity_Naranja.class);
+                        //Toast.makeText(getContext(), "Fruta 3", Toast.LENGTH_SHORT).show();
                         break;
 
                     case 3:
-                        Toast.makeText(getContext(), "Fruta 4", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(view.getContext(), ScrollingActivity_Manzana.class);
+                        //Toast.makeText(getContext(), "Fruta 4", Toast.LENGTH_SHORT).show();
                         break;
 
                     case 4:
-                        Toast.makeText(getContext(), "Fruta 5", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(view.getContext(), ScrollingActivity_Cereza.class);
+                        //Toast.makeText(getContext(), "Fruta 5", Toast.LENGTH_SHORT).show();
                         break;
 
                     case 5:
-                        Toast.makeText(getContext(), "Fruta 6", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(view.getContext(), ScrollingActivity_Pera.class);
+                        //Toast.makeText(getContext(), "Fruta 6", Toast.LENGTH_SHORT).show();
                         break;
 
                     case 6:
-                        Toast.makeText(getContext(), "Fruta 7", Toast.LENGTH_SHORT).show();
+                        intent = new Intent(view.getContext(), ScrollingActivity_Mora.class);
+                        //Toast.makeText(getContext(), "Fruta 7", Toast.LENGTH_SHORT).show();
                         break;
                     default:
                         intent = new Intent();
