@@ -1,0 +1,10 @@
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\bin\Debug\ExamenDI1eva.exe
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\bin\Debug\ExamenDI1eva.pdb
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\bin\Debug\ExamenDI1eva.xml
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\obj\Debug\ResolveAssemblyReference.cache
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\obj\Debug\WindowsApplication1.Form1.resources
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\obj\Debug\WindowsApplication1.Resources.resources
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\obj\Debug\ExamenDI1eva.vbproj.GenerateResource.Cache
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\obj\Debug\ExamenDI1eva.exe
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\obj\Debug\ExamenDI1eva.xml
+C:\Users\Alumnos\Desktop\ExamenDI1eva\ExamenDI1eva\obj\Debug\ExamenDI1eva.pdb
