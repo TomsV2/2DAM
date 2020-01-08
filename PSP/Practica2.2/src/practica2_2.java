@@ -61,6 +61,7 @@ public class practica2_2 extends Applet implements Runnable,ActionListener {
   
   void mover(){
      x += dx;
+     
      if (x >= (getSize().width-13) || x <= -1) {
     	 dx*= -1;
      }
